@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="article">
+  <div class="back-line"><a href="{{ '/' | relative_url }}#articulos">← Todos los artículos</a><span>BITÁCORA / {{ page.category | upcase }}</span></div>
+  <header class="article-heading">
+    <p class="eyebrow"><span class="dot"></span>{{ page.category }} / Artículo {{ page.number }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="article-deck">{{ page.description }}</p>
+    <div class="article-meta">Por {{ page.author }} <span>·</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%d/%m/%Y' }}</time><span>·</span>{{ page.read_time }} min de lectura</div>
+  </header>
+  <figure class="cover"><img src="{{ page.image | relative_url }}" width="1200" height="700" alt="{{ page.image_alt }}"><figcaption>Ilustración original de PixelTrace</figcaption></figure>
+  <div class="prose">{{ content }}</div>
+  <aside class="continue">
+    <p class="eyebrow">SEGUIR EXPLORANDO</p><h2>El siguiente nivel está detrás del código.</h2>
+    <div class="more">{% for p in site.posts %}{% if p.url != page.url %}<a href="{{ p.url | relative_url }}"><small>{{ p.category }}</small><strong>{{ p.title }}</strong><span aria-hidden="true">↗</span></a>{% endif %}{% endfor %}</div>
+  </aside>
+</article>

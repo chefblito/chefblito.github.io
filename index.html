@@ -1,0 +1,26 @@
+---
+layout: default
+title: Inicio
+description: "PixelTrace: ingeniería inversa, emulación, modding y preservación de videojuegos."
+---
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow"><span class="dot"></span> TECNOLOGÍA / VIDEOJUEGOS / CURIOSIDAD</p>
+    <h1>El juego es solo<br>la <em>superficie.</em></h1>
+    <p class="lead">¿Qué hay detrás de cada píxel? Exploramos la ingeniería inversa y cómo ayuda a comprender, modificar y preservar videojuegos.</p>
+    <div class="actions"><a class="button primary" href="#articulos">Explorar artículos <span>↗</span></a><a class="button secondary" href="{{ '/sobre-el-blog/' | relative_url }}">Conoce PixelTrace</a></div>
+    <div class="stats"><span><b>03</b> ARTÍCULOS</span><i></i><span><b>HTML + CSS</b> & JEKYLL</span><i></i><span><b>100 %</b> ESTÁTICO</span></div>
+  </div>
+  <div class="hero-visual"><img src="{{ '/assets/img/reversa.svg' | relative_url }}" alt="Mando de videojuego con circuitos digitales y fragmentos de código" width="1200" height="700"><span class="visual-label"><span class="dot"></span> REVERSE ENGINEERING // LEVEL 01</span></div>
+</section>
+<section class="pillars" aria-label="Tres enfoques de PixelTrace"><div><small>01 / DESCUBRIR</small><h2>Entender sistemas</h2><p>Observar archivos, instrucciones y comportamientos.</p></div><div><small>02 / CREAR</small><h2>Ampliar posibilidades</h2><p>Mods, herramientas y traducciones.</p></div><div><small>03 / CONSERVAR</small><h2>Preservar la historia</h2><p>Compatibilidad y legado de los videojuegos.</p></div></section>
+<section class="entries" id="articulos">
+  <div class="entries-head"><div><p class="eyebrow">/ LA BITÁCORA</p><h2>Notas desde el <em>código.</em></h2><p>Una mirada accesible a la tecnología detrás de los juegos.</p></div><span>EDICIÓN 001 — 2026</span></div>
+  <div class="cards">{% assign entries = site.posts | sort: "date" %}{% for post in entries %}
+    <article class="card">
+      <a class="card-image" href="{{ post.url | relative_url }}" aria-label="Leer: {{ post.title }}"><img loading="lazy" width="1200" height="700" src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}"><span class="image-arrow" aria-hidden="true">↗</span></a>
+      <div class="card-info"><div class="card-category"><span>{{ post.category }}</span><span>{{ post.read_time }} MIN</span></div><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.description }}</p><a class="read" href="{{ post.url | relative_url }}">Leer artículo →</a></div>
+    </article>
+  {% endfor %}</div>
+</section>
+<section class="bottom-cta"><p class="eyebrow">EL PORQUÉ DE PIXELTRACE</p><h2>No todo lo que hace funcionar un videojuego está a la vista.</h2><p>Descubre las ideas, herramientas y comunidades que estudian cómo funciona el software interactivo.</p><a href="{{ '/sobre-el-blog/' | relative_url }}">Sobre este proyecto ↗</a></section>

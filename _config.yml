@@ -1,0 +1,18 @@
+title: "PixelTrace"
+description: "Ingeniería inversa, modding y preservación en el mundo de los videojuegos."
+url: "https://chefblito.github.io"
+baseurl: ""
+lang: es
+timezone: Europe/Madrid
+markdown: kramdown
+permalink: /blog/:title/
+future: false
+exclude:
+  - README.md
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Pablo Esquinas Lamas
