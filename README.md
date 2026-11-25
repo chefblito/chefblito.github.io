@@ -1,31 +1,35 @@
-# PixelTrace
+# PixelTrace — Anatomía del videojuego
 
-Blog académico sobre ingeniería inversa, modding, preservación y emulación de videojuegos.
+Blog académico sobre ingeniería inversa, modding, preservación y emulación.
 
 **Autor:** Pablo Esquinas Lamas  
 **Asignatura:** Desarrollo de Aplicaciones en Red  
-**Sitio:** https://chefblito.github.io
+**Web:** https://chefblito.github.io
 
-## Tecnologías
-HTML5, CSS3, Markdown, SVG y Jekyll. Alojamiento: GitHub Pages.
+## Diseño
 
-## Estructura
-- `index.html`: página de inicio, navegación y tarjetas de artículos.
-- `_layouts/default.html`: estructura HTML común.
-- `_layouts/post.html`: plantilla reutilizable para entradas.
-- `_posts/`: las tres entradas del blog, en Markdown y con metadatos YAML.
-- `assets/css/style.css`: CSS propio, responsive y sin frameworks.
-- `assets/img/`: ilustraciones SVG originales y favicon.
-- `sobre-el-blog.md`: presentación del proyecto.
-- `_config.yml`: configuración del generador Jekyll.
+Un lenguaje visual inspirado en manuales de desmontaje y archivos técnicos, sin degradados tecnológicos ni tarjetas superpuestas.
+
+Paleta: papel #F1EBDD; tinta #17221E; óxido #C44124; circuito #24544B; reglas #B7B4A8.
+Tipografías: IBM Plex Sans e IBM Plex Mono.
+
+Elemento memorable: esquema original de un mando con tres niveles, carcasa, circuito y lógica. Es un diagrama conceptual, no un plano técnico real.
+
+## Archivos
+
+- index.html: portada e índice de los tres artículos.
+- _layouts/default.html: navegación y estructura común.
+- _layouts/post.html: plantilla reutilizable para entradas.
+- _posts/: artículos en Markdown con sus fuentes.
+- assets/css/style.css: CSS propio y responsive.
+- assets/img/: ilustraciones originales SVG.
+- sobre-el-blog.md: documentación del proyecto.
+- _config.yml: configuración de Jekyll.
 
 ## Publicación
-En GitHub: **Settings → Pages → Build and deployment → Deploy from a branch → main / (root)**.
 
-GitHub Pages construye el blog con Jekyll al publicar desde la rama principal.
+En Settings > Pages > Build and deployment, seleccionar Deploy from a branch, main y /(root). GitHub Pages construye el sitio Jekyll al actualizar main.
 
 ## Comprobación
-Abrir la página de inicio, cada una de las tres entradas, el menú y la página de información; verificar además que las imágenes cargan correctamente y que el contenido se lee en móvil.
 
-## Fuentes
-Cada entrada incluye enlaces a documentación oficial, proyectos y estudios. Los gráficos SVG son originales.
+Abrir los tres artículos, verificar el menú, las fuentes, el regreso al índice y la lectura en móvil. No se incluyen testimonios ni estadísticas inventadas.

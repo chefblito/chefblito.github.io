@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+<title id="title">Despiece conceptual de un mando de videojuego</title><desc id="desc">Tres módulos separados verticalmente: carcasa, circuito y reglas de programación, conectados mediante líneas de análisis</desc>
+<defs><pattern id="grid" width="35" height="35" patternUnits="userSpaceOnUse"><path d="M35 0H0V35" fill="none" stroke="#94B9AB" stroke-opacity=".17" stroke-width="1"/></pattern></defs>
+<rect width="900" height="900" fill="#24544B"/><rect width="900" height="900" fill="url(#grid)"/>
+<g font-family="monospace" font-size="19" fill="#F1EBDD" letter-spacing="1.4"><text x="44" y="51">MODELO CONCEPTUAL</text><text x="856" y="51" text-anchor="end">NO A ESCALA</text></g>
+<path d="M44 67H856" stroke="#A0B8AA" stroke-width="1"/><path d="M44 297H856M44 594H856M44 842H856" stroke="#B5C9BD" opacity=".55" stroke-dasharray="7 11"/>
+<g font-family="monospace" font-size="18" fill="#F1EBDD"><text x="48" y="114">01 / CARCASA</text><text x="48" y="347">02 / CIRCUITO</text><text x="48" y="649">03 / LÓGICA</text></g>
+<g stroke="#F1EBDD" stroke-width="6" fill="none" stroke-linecap="square"><path d="M322 156Q373 132 438 158Q469 173 506 158Q573 131 626 164Q675 197 704 255Q715 275 688 282Q671 287 642 261L609 240H341L307 262Q277 285 259 277Q232 270 248 242Q275 186 322 156Z"/><path d="M361 191v65m-32-33h65"/><circle cx="570" cy="223" r="15"/><circle cx="612" cy="207" r="15"/><circle cx="612" cy="247" r="15"/><circle cx="654" cy="229" r="15"/><circle cx="447" cy="226" r="17"/><circle cx="511" cy="226" r="17"/></g>
+<g fill="#C44124"><circle cx="570" cy="223" r="8"/><circle cx="612" cy="207" r="8"/><circle cx="612" cy="247" r="8"/><circle cx="654" cy="229" r="8"/></g>
+<g stroke="#F1EBDD" fill="none"><path d="M477 287v70" stroke-width="2" stroke-dasharray="6 9"/><path d="M477 565v79" stroke-width="2" stroke-dasharray="6 9"/></g>
+<g transform="translate(263 370)"><rect x="0" y="0" width="430" height="190" rx="12" stroke="#F1EBDD" stroke-width="5" fill="none"/>
+<rect x="143" y="52" width="140" height="89" fill="#F1EBDD"/><rect x="168" y="73" width="90" height="47" fill="#24544B"/>
+<g stroke="#F1EBDD" stroke-width="4" fill="none"><path d="M143 87H72V47H34M143 121H100V159H34M283 87H348V44H400M283 121H333V159H397"/></g>
+<g stroke="#C44124" stroke-width="3"><path d="M176 52V25M208 52V25M240 52V25M176 141V168M208 141V168M240 141V168"/></g>
+<g fill="#F1EBDD"><circle cx="34" cy="47" r="7"/><circle cx="34" cy="159" r="7"/><circle cx="400" cy="44" r="7"/><circle cx="397" cy="159" r="7"/></g></g>
+<g font-family="monospace" font-size="27" fill="#F1EBDD"><text x="270" y="711">INPUT  →  STATE</text><text x="270" y="750">STATE  →  UPDATE</text><text x="270" y="789">UPDATE →  OUTPUT</text></g>
+<g fill="#C44124"><rect x="236" y="687" width="12" height="12"/><rect x="236" y="726" width="12" height="12"/><rect x="236" y="765" width="12" height="12"/></g>
+<g stroke="#C9D0B4" stroke-width="2" fill="none"><path d="M77 130h145v24H250"/><path d="M80 363h164"/><path d="M80 667h147"/></g>
+<g font-family="monospace" font-size="15" fill="#E7F2E9"><text x="46" y="875">OBSERVAR  /  DOCUMENTAR  /  CONTRASTAR</text></g>
+</svg>

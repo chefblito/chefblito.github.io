@@ -1,26 +1,53 @@
 ---
 layout: default
 title: Inicio
-description: "PixelTrace: ingeniería inversa, emulación, modding y preservación de videojuegos."
+description: "PixelTrace: notas de laboratorio sobre ingeniería inversa, modding y emulación de videojuegos."
 ---
-<section class="hero">
-  <div class="hero-text">
-    <p class="eyebrow"><span class="dot"></span> TECNOLOGÍA / VIDEOJUEGOS / CURIOSIDAD</p>
-    <h1>El juego es solo<br>la <em>superficie.</em></h1>
-    <p class="lead">¿Qué hay detrás de cada píxel? Exploramos la ingeniería inversa y cómo ayuda a comprender, modificar y preservar videojuegos.</p>
-    <div class="actions"><a class="button primary" href="#articulos">Explorar artículos <span>↗</span></a><a class="button secondary" href="{{ '/sobre-el-blog/' | relative_url }}">Conoce PixelTrace</a></div>
-    <div class="stats"><span><b>03</b> ARTÍCULOS</span><i></i><span><b>HTML + CSS</b> & JEKYLL</span><i></i><span><b>100 %</b> ESTÁTICO</span></div>
+<section class="front" aria-labelledby="front-title">
+  <div class="front-rail" aria-hidden="true"><span>DOCUMENTACIÓN / SOFTWARE INTERACTIVO</span><span>ARCHIVO ABIERTO · 2026</span></div>
+  <div class="front-copy">
+    <p class="section-key"><span class="key-square"></span>CUADERNO DE INGENIERÍA INVERSA <span class="key-divider">/</span> VIDEOJUEGOS</p>
+    <h1 id="front-title">DESMONTAR<br><span>EL JUEGO</span><span class="punctuation">.</span></h1>
+    <p class="front-description">Un videojuego es mucho más que lo que aparece en pantalla. Abrimos su caja negra para explorar cómo funcionan sus sistemas, cómo nacen los mods y por qué importa preservarlos.</p>
+    <a class="index-link" href="#articulos">Consultar el archivo <span aria-hidden="true">↘</span></a>
   </div>
-  <div class="hero-visual"><img src="{{ '/assets/img/reversa.svg' | relative_url }}" alt="Mando de videojuego con circuitos digitales y fragmentos de código" width="1200" height="700"><span class="visual-label"><span class="dot"></span> REVERSE ENGINEERING // LEVEL 01</span></div>
+  <figure class="front-plate">
+    <div class="plate-bar"><span>LÁMINA / 01</span><span>DESPIECE CONCEPTUAL</span></div>
+    <img src="{{ '/assets/img/despiece.svg' | relative_url }}" alt="Esquema conceptual en tres niveles: carcasa, circuito y reglas de un mando de videojuegos" width="900" height="900">
+    <figcaption>Observar el exterior · estudiar el circuito · comprender la lógica. No representa un dispositivo comercial concreto.</figcaption>
+  </figure>
 </section>
-<section class="pillars" aria-label="Tres enfoques de PixelTrace"><div><small>01 / DESCUBRIR</small><h2>Entender sistemas</h2><p>Observar archivos, instrucciones y comportamientos.</p></div><div><small>02 / CREAR</small><h2>Ampliar posibilidades</h2><p>Mods, herramientas y traducciones.</p></div><div><small>03 / CONSERVAR</small><h2>Preservar la historia</h2><p>Compatibilidad y legado de los videojuegos.</p></div></section>
-<section class="entries" id="articulos">
-  <div class="entries-head"><div><p class="eyebrow">/ LA BITÁCORA</p><h2>Notas desde el <em>código.</em></h2><p>Una mirada accesible a la tecnología detrás de los juegos.</p></div><span>EDICIÓN 001 — 2026</span></div>
-  <div class="cards">{% assign entries = site.posts | sort: "date" %}{% for post in entries %}
-    <article class="card">
-      <a class="card-image" href="{{ post.url | relative_url }}" aria-label="Leer: {{ post.title }}"><img loading="lazy" width="1200" height="700" src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}"><span class="image-arrow" aria-hidden="true">↗</span></a>
-      <div class="card-info"><div class="card-category"><span>{{ post.category }}</span><span>{{ post.read_time }} MIN</span></div><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.description }}</p><a class="read" href="{{ post.url | relative_url }}">Leer artículo →</a></div>
+<section class="methods" aria-label="Tres perspectivas del blog">
+  <div class="methods-label">TRES PERSPECTIVAS</div>
+  <div class="method"><span>01</span><h2>ANALIZAR</h2><p>Comprender el comportamiento de un sistema existente.</p></div>
+  <div class="method"><span>02</span><h2>MODIFICAR</h2><p>Estudiar formatos y herramientas que permiten crear mods.</p></div>
+  <div class="method"><span>03</span><h2>PRESERVAR</h2><p>Documentar tecnologías para que sigan siendo estudiables.</p></div>
+</section>
+<section class="archive" id="articulos" aria-labelledby="archive-title">
+  <div class="archive-head">
+    <p class="section-key"><span class="key-square"></span>ÍNDICE DEL CUADERNO</p>
+    <h2 id="archive-title">NOTAS DE<br>LABORATORIO<span class="punctuation">.</span></h2>
+    <p>Tres lecturas sobre las tecnologías y comunidades que investigan el software de videojuegos.</p>
+  </div>
+  <div class="article-index">
+  {% assign entries = site.posts | sort: "date" %}
+  {% for post in entries %}
+    <article class="index-entry">
+      <div class="entry-number">{{ post.number | default: forloop.index | prepend: '0' }}</div>
+      <div class="entry-body">
+        <p class="entry-meta">{{ post.category | upcase }} <span>/</span> <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%d.%m.%Y' }}</time></p>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.description }}</p>
+        <a class="entry-read" href="{{ post.url | relative_url }}">Abrir expediente <span aria-hidden="true">↗</span></a>
+      </div>
+      <a class="entry-figure" href="{{ post.url | relative_url }}" aria-label="Leer {{ post.title }}">
+        <img loading="lazy" src="{{ post.image | relative_url }}" width="1200" height="700" alt="{{ post.image_alt }}">
+      </a>
     </article>
-  {% endfor %}</div>
+  {% endfor %}
+  </div>
 </section>
-<section class="bottom-cta"><p class="eyebrow">EL PORQUÉ DE PIXELTRACE</p><h2>No todo lo que hace funcionar un videojuego está a la vista.</h2><p>Descubre las ideas, herramientas y comunidades que estudian cómo funciona el software interactivo.</p><a href="{{ '/sobre-el-blog/' | relative_url }}">Sobre este proyecto ↗</a></section>
+<section class="closing-note">
+  <p class="section-key">NOTA DEL EDITOR</p>
+  <div><h2>La curiosidad también es una herramienta de desarrollo.</h2><p>PixelTrace es un proyecto académico de divulgación. Los artículos explican conceptos, documentan fuentes y distinguen la investigación técnica de la distribución de software protegido.</p><a href="{{ '/sobre-el-blog/' | relative_url }}">Cómo se construyó este sitio ↗</a></div>
+</section>

@@ -2,32 +2,35 @@
 layout: default
 title: Sobre el blog
 permalink: /sobre-el-blog/
-description: "Qué es PixelTrace, quién lo ha creado y las herramientas utilizadas."
+description: "Objetivos, autor y tecnologías utilizadas en el blog académico PixelTrace."
 ---
-<div class="about-page">
-<p class="eyebrow"><span class="dot"></span> DETRÁS DEL BLOG</p>
-<h1>Sobre <em>PixelTrace.</em></h1>
+<div class="about-page" markdown="1">
 
-**PixelTrace** es un blog divulgativo sobre la ingeniería inversa aplicada a los videojuegos. Exploramos cómo entender programas, documentar su funcionamiento, crear modificaciones, mejorar la compatibilidad y ayudar a conservar la historia del medio.
+<p class="section-key">NOTAS DEL PROYECTO / ACERCA DE</p>
 
-Este sitio ha sido desarrollado por **Pablo Esquinas Lamas** para la asignatura **Desarrollo de Aplicaciones en Red**.
+# El blog detrás del blog.
 
-## Tecnologías utilizadas
+**PixelTrace** es un cuaderno divulgativo sobre ingeniería inversa aplicada a los videojuegos: cómo comprender programas, estudiar formatos, desarrollar herramientas compatibles y contribuir a preservar obras digitales.
 
-- **HTML5**: estructura de la portada, los artículos y los menús.
-- **CSS3**: diseño propio, tarjetas, tipografía y adaptación a móviles.
-- **Jekyll**: generación de páginas mediante plantillas y artículos Markdown.
-- **GitHub Pages**: publicación del sitio web estático.
+El proyecto está desarrollado por **Pablo Esquinas Lamas** para la asignatura **Desarrollo de Aplicaciones en Red**.
 
-Las imágenes de cabecera son **ilustraciones SVG originales** alojadas en el mismo repositorio, sin depender de recursos de terceros.
+## Cómo está construido
 
-## Nuestra perspectiva
+- **HTML5** para la estructura de las páginas, la navegación y los artículos.
+- **CSS3** para el sistema visual, la maquetación editorial y el diseño adaptable a móviles.
+- **Jekyll y Markdown** para crear entradas a partir de plantillas comunes.
+- **GitHub Pages** para alojar y publicar el sitio web.
 
-La ingeniería inversa puede servir para investigar sistemas, construir herramientas de interoperabilidad y preservar videojuegos. El blog trata estos temas con fines educativos y desde una perspectiva responsable. No incluye copias de juegos, archivos de terceros ni instrucciones para obtener contenido sin autorización.
+Las ilustraciones son **SVG originales** creados para explicar conceptos. No representan productos comerciales, no reproducen logotipos de terceros y no requieren una biblioteca de imágenes externa.
 
-## Qué encontrarás
+## Criterio editorial
 
-Tres entradas introductorias dedicadas a los fundamentos técnicos, al modding y la preservación, y a la emulación y sus implicaciones.
+Los textos son introductorios, citan las fuentes técnicas y diferencian la investigación de sistemas de la distribución de contenido protegido. Las posibilidades de ingeniería inversa e interoperabilidad dependen de las normas aplicables y de las licencias de cada producto.
 
-<a class="button primary" href="{{ '/' | relative_url }}#articulos">Ver los artículos ↗</a>
+## Navegar por el cuaderno
+
+Puedes empezar por los fundamentos, continuar con el modding y la preservación y terminar con la emulación y la compatibilidad.
+
+[Volver al índice de artículos]({{ '/' | relative_url }}#articulos)
+
 </div>
